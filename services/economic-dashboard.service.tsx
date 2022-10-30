@@ -2,44 +2,64 @@
 
 
 export const fetchCpiusData = async(startDate: string, endDate: string) => {
-    const response = await fetch(
-        `https://www.econdb.com/api/series/CPIUS/?from=${startDate}&to=${endDate}&format=json`
-      );
-    const { data } = await response.json();
-    return data;
+    try {
+        const response = await fetch(
+            `https://www.econdb.com/api/series/CPIUS/?from=${startDate}&to=${endDate}&format=json`
+          );
+        const { data } = await response.json();
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
 }
 
 
 export const fetchConfusData = async(startDate: string, endDate: string) => {
-    const response = await fetch(
-        `https://www.econdb.com/api/series/CONFUS/?from=${startDate}&to=${endDate}&format=json`
-      );
-    const { data } = await response.json();
-    return data;
+    try {
+        const response = await fetch(
+            `https://www.econdb.com/api/series/CONFUS/?from=${startDate}&to=${endDate}&format=json`
+          );
+        const { data } = await response.json();
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
 }
 
 export const fetchRetausData = async(startDate: string, endDate: string) => {
-    const response = await fetch(
-        `https://www.econdb.com/api/series/RETAUS/?from=${startDate}&to=${endDate}&format=json`
-      );
-    const { data } = await response.json();
-    return data;
+    try {
+        const response = await fetch(
+            `https://www.econdb.com/api/series/RETAUS/?from=${startDate}&to=${endDate}&format=json`
+          );
+        const { data } = await response.json();
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
 }
 
 export const fetchSentusData = async(startDate: string, endDate: string) => {
-    const response = await fetch(
-        `https://www.econdb.com/api/series/SENTUS/?from=${startDate}&to=${endDate}&format=json`
-      );
-    const { data } = await response.json();
-    return data;
+    try {
+        const response = await fetch(
+            `https://www.econdb.com/api/series/SENTUS/?from=${startDate}&to=${endDate}&format=json`
+          );
+        const { data } = await response.json();
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
 }
 
 export const fetchPopusData = async(startDate: string, endDate: string) => {
+    try {
     const response = await fetch(
-        `https://www.econdb.com/api/series/POPUS/?from=${startDate}&to=${endDate}&format=json`
-      );
-    const { data } = await response.json();
-    return data;
+            `https://www.econdb.com/api/series/POPUS/?from=${startDate}&to=${endDate}&format=json`
+          );
+        const { data } = await response.json();
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
 }
 
 export const manipulateData = (data : any) => {
